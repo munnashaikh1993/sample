@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Biolab Application Sponsor Admin Test Suite3">
+	
+	<test name="Sponsor Admin Sanity Test3">
+		<classes>
+			<class name="MainClass.SponsorRegressionTest3" />
+		</classes>
+	</test>
+	<!-- Test -->
+</suite> <!-- Suite -->

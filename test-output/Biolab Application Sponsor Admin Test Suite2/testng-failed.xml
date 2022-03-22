@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Biolab Application Sponsor Admin Test Suite2]" guice-stage="DEVELOPMENT">
+  <listeners>
+    <listener class-name="ExtentReport.ExtentReporterListener"/>
+  </listeners>
+  <test thread-count="5" name="Sponsor Admin Sanity Test2(failed)">
+    <classes>
+      <class name="MainClass.SponsorRegressionTest2">
+        <methods>
+          <include name="afterTest"/>
+          <include name="beforeTest"/>
+          <include name="findAvalablesiteTest"/>
+        </methods>
+      </class> <!-- MainClass.SponsorRegressionTest2 -->
+    </classes>
+  </test> <!-- Sponsor Admin Sanity Test2(failed) -->
+</suite> <!-- Failed suite [Biolab Application Sponsor Admin Test Suite2] -->
