@@ -1,135 +1,187 @@
 package SiteAdmin;
 
+import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.Select;
 
 import Browsers.Browser;
 
 public class BL_TC_07_Site extends Browser{
-	public static void Add_Edit_Delete_Resident_Admin() throws Exception 
+	public static void filterCompanys() throws Exception 
 	{
-		System.out.println("***************************BL_TC_07****************************************");
+		System.out.println("***************************BL_TC_07_Site****************************************");
 		driver.manage().timeouts().implicitlyWait(15000, TimeUnit.SECONDS);
-		Thread.sleep(2000);
-		//Manage Users header
-		driver.findElement(SiteAdminLocatores.Manage_Users_header).click();
-		Thread.sleep(2000);
-
-		//Resident Admin button
-		driver.findElement(SiteAdminLocatores.Resident_Admin).click();
-		Thread.sleep(2000);
-
-		//ADD NEW RESIDENT ADMIN button
-		driver.findElement(SiteAdminLocatores.ADD_NEW_RESIDENT_ADMIN).click();
-
-		String name="salman";
-		//First Name
-		driver.findElement(SiteAdminLocatores.First_name).sendKeys(name);
-		Thread.sleep(2000);
-
-		//Last Name
-		driver.findElement(SiteAdminLocatores.Last_Name).sendKeys("Shaikh");
-		Thread.sleep(2000);
-		String emailid="salman12345@gmail.com";
-		//Email
-		driver.findElement(SiteAdminLocatores.Email).sendKeys(emailid);
-		Thread.sleep(2000);
-
-		//Phone no
-		driver.findElement(SiteAdminLocatores.Phone_no).sendKeys("9856234152");
-		Thread.sleep(2000);
-
-		//Title
-		driver.findElement(SiteAdminLocatores.Title).sendKeys("QA tester");
-		Thread.sleep(2000);
-
+		Thread.sleep(3000);
 		Actions act=new Actions(driver);
 
-		//Company
-		WebElement companydropdown=driver.findElement(SiteAdminLocatores.company);
-
-		act.click(companydropdown).perform();
-		act.sendKeys(Keys.ARROW_DOWN).perform();
-		act.sendKeys(Keys.ARROW_DOWN).perform();
-		act.sendKeys(Keys.ENTER).perform();
-
-		//User Type
-		WebElement user_type=driver.findElement(SiteAdminLocatores.User_Type);
-
-		act.click(user_type).perform();
-		act.sendKeys(Keys.ARROW_DOWN).perform();
-		act.sendKeys(Keys.ARROW_DOWN).perform();
-		act.sendKeys(Keys.ARROW_DOWN).perform();
-		act.sendKeys(Keys.ENTER).perform();
-
-
-		//click on add user
-		driver.findElement(SiteAdminLocatores.Add_User).click();
-		Thread.sleep(3000);
-
-		//Edit
-
-		//Edit button
-		driver.findElement(By.xpath("//h5[contains(text(),'"+name+"')]/..//button[text()='Edit']")).click();
-		Thread.sleep(2000);
-
-		name="omkar";
-		//First Name
-		driver.findElement(SiteAdminLocatores.First_name).clear();
-		driver.findElement(SiteAdminLocatores.First_name).sendKeys(name);
-		Thread.sleep(2000);
-
-		//Last Name
-		driver.findElement(SiteAdminLocatores.Last_Name).clear();
-		driver.findElement(SiteAdminLocatores.Last_Name).sendKeys("patil");
-		Thread.sleep(2000);
-
-		//Phone no
-		driver.findElement(SiteAdminLocatores.Phone_no).clear();
-		driver.findElement(SiteAdminLocatores.Phone_no).sendKeys("9856234152");
-		Thread.sleep(2000);
-
-		//Title
-		driver.findElement(SiteAdminLocatores.Title).clear();
-		driver.findElement(SiteAdminLocatores.Title).sendKeys("test Automantion");
-		Thread.sleep(2000);
-
-
-
-		//Company
-		WebElement companydropdown1=driver.findElement(SiteAdminLocatores.company);
-
-		act.click(companydropdown1).perform();
-		act.sendKeys(Keys.ARROW_DOWN).perform();
-		act.sendKeys(Keys.ARROW_DOWN).perform();
-		act.sendKeys(Keys.ARROW_DOWN).perform();
-		act.sendKeys(Keys.ENTER).perform();
-
-		//User Type
-		WebElement user_type1=driver.findElement(SiteAdminLocatores.User_Type);
-
-		act.click(user_type1).perform();
-		act.sendKeys(Keys.ARROW_DOWN).perform();
-		act.sendKeys(Keys.ARROW_DOWN).perform();
-		act.sendKeys(Keys.ENTER).perform();
-
-
-		//click on add user
-		driver.findElement(By.xpath("//button[text()=' Update User ']")).click();
-		Thread.sleep(3000);
+		WebElement sitee=driver.findElement(SiteAdminLocatores.Site_drop);
 		
 		
-         //Delete
-		driver.findElement(By.xpath("//h5[contains(text(),'"+name+"')]/..//button[text()='Delete']")).click();
+		Select select=new Select(sitee);
+		select.selectByVisibleText("Ipsen");
+		driver.manage().timeouts().implicitlyWait(10000, TimeUnit.SECONDS);
+		Thread.sleep(4000);
+		//click on companies tab
+		driver.findElement(By.xpath("//a[text()='Companies']")).click();
+		driver.manage().timeouts().implicitlyWait(10000, TimeUnit.SECONDS);
+		Thread.sleep(3000);
 
-		WebElement delete=driver.findElement(By.xpath("//button[text()='YES, DELETE']"));
+		//Company Status
+		WebElement Company_Status_dropdown=driver.findElement(SiteAdminLocatores.Company_Status);
+		act.moveToElement(Company_Status_dropdown).perform();
+		act.click(Company_Status_dropdown).perform();
+		act.sendKeys(Keys.ARROW_DOWN).perform();
+		act.sendKeys(Keys.ENTER).perform();
+		driver.manage().timeouts().implicitlyWait(10000, TimeUnit.SECONDS);
+		Thread.sleep(1000);
 
-		act.moveToElement(delete).perform();
-		act.click(delete).perform();
+		//Committee Status
+		WebElement Committee_Status_dropdown=driver.findElement(SiteAdminLocatores.Committee_Status);
+		act.moveToElement(Committee_Status_dropdown).perform();
+		act.click(Committee_Status_dropdown).perform();
+		act.sendKeys(Keys.ARROW_DOWN).perform();
+		act.sendKeys(Keys.ENTER).perform();
+		driver.manage().timeouts().implicitlyWait(10000, TimeUnit.SECONDS);
+		Thread.sleep(1000);
+
+
+		//Company Onboarding
+		WebElement Company_Onboarding1_dropdown=driver.findElement(SiteAdminLocatores.Company_Onboarding);
+		act.moveToElement(Company_Onboarding1_dropdown);
+		act.click(Company_Onboarding1_dropdown).perform();
+		act.sendKeys(Keys.ARROW_DOWN).perform();
+		act.sendKeys(Keys.ENTER).perform();
+		driver.manage().timeouts().implicitlyWait(10000, TimeUnit.SECONDS);
+		Thread.sleep(2000);
+
+		//Company Visibility
+		WebElement Company_Visibility_dropdown=driver.findElement(SiteAdminLocatores.Company_Visibility);
+		act.click(Company_Visibility_dropdown).perform();
+		act.sendKeys(Keys.ARROW_DOWN).perform();
+		act.sendKeys(Keys.ENTER).perform();
+		driver.manage().timeouts().implicitlyWait(10000, TimeUnit.SECONDS);
+		Thread.sleep(4000);
+		
+		driver.findElement(SiteAdminLocatores.Invoicing_Waitlist).click();
+		Thread.sleep(2000);
+		
+		//click on companies tab
+		driver.findElement(By.xpath("//a[text()='Companies']")).click();
+		driver.manage().timeouts().implicitlyWait(10000, TimeUnit.SECONDS);
+		Thread.sleep(1000);
+		
+		//Clear Button
+		driver.findElement(SiteAdminLocatores.Clear).click();
+		Thread.sleep(1000);
+
+		//Click on Company card view Icon
+		driver.findElement(SiteAdminLocatores.Company_Card_View).click();
+		driver.manage().timeouts().implicitlyWait(10000, TimeUnit.SECONDS);
+		Thread.sleep(1000);
+
+		//Company Status
+		WebElement Company_Status_dropdown1=driver.findElement(SiteAdminLocatores.Company_Status);
+		act.click(Company_Status_dropdown1).perform();
+		act.sendKeys(Keys.ARROW_DOWN).perform();
+		act.sendKeys(Keys.ENTER).perform();
+		driver.manage().timeouts().implicitlyWait(10000, TimeUnit.SECONDS);
+		Thread.sleep(1000);
+
+		//Committee Status
+		WebElement Committee_Status_dropdown1=driver.findElement(SiteAdminLocatores.Committee_Status);
+		act.click(Committee_Status_dropdown1).perform();
+		act.sendKeys(Keys.ARROW_DOWN).perform();
+		act.sendKeys(Keys.ENTER).perform();
+		driver.manage().timeouts().implicitlyWait(10000, TimeUnit.SECONDS);
+		Thread.sleep(1000);
+
+
+		//Company Onboarding
+		WebElement Company_Onboarding1_dropdown1=driver.findElement(SiteAdminLocatores.Company_Onboarding);
+
+
+		act.click(Company_Onboarding1_dropdown1).perform();
+		act.sendKeys(Keys.ARROW_DOWN).perform();
+		act.sendKeys(Keys.ENTER).perform();
+		driver.manage().timeouts().implicitlyWait(10000, TimeUnit.SECONDS);
+		Thread.sleep(1000);
+
+		//Company Visibility
+		WebElement Company_Visibility_dropdown1=driver.findElement(SiteAdminLocatores.Company_Visibility);
+
+		act.click(Company_Visibility_dropdown1).perform();
+		act.sendKeys(Keys.ARROW_DOWN).perform();
+		act.sendKeys(Keys.ENTER).perform();
+		driver.manage().timeouts().implicitlyWait(10000, TimeUnit.SECONDS);
+		Thread.sleep(1000);
+		
+		driver.findElement(SiteAdminLocatores.Invoicing_Waitlist).click();
+		Thread.sleep(1000);
+		
+		//click on companies tab
+		driver.findElement(By.xpath("//a[text()='Companies']")).click();
+		driver.manage().timeouts().implicitlyWait(10000, TimeUnit.SECONDS);
+		Thread.sleep(1000);
+
+		//Clear Button
+		driver.findElement(SiteAdminLocatores.Clear).click();
+		Thread.sleep(1000);
+
+		//Click on Resident Table view Icon
+		driver.manage().timeouts().implicitlyWait(10000,TimeUnit.SECONDS);
+		Thread.sleep(2000);
+		driver.findElement(SiteAdminLocatores.Resident_Table_View).click();
+		driver.manage().timeouts().implicitlyWait(10000,TimeUnit.SECONDS);
+		Thread.sleep(2000);
+		System.out.println("When selected Resident Table view");
+		
+		WebElement Company_Status_dropdown3=driver.findElement(SiteAdminLocatores.Company_Status);
+		
+		if (Company_Status_dropdown3.isEnabled()) 
+		{
+			System.out.println("Company Status dropdown is enables");
+		}
+		else {
+			System.out.println("Company Status dropdown is deseble");
+		}
+		
+		WebElement Committee_Status_dropdown3=driver.findElement(SiteAdminLocatores.Committee_Status);
+		
+		if (Committee_Status_dropdown3.isEnabled()) 
+		{
+			System.out.println("Committee Status dropdown is enabled");
+		}else {
+			System.out.println("Committee Status dropdown is deseble");
+		}
+		
+		WebElement Company_Visibility_dropdown3=driver.findElement(SiteAdminLocatores.Company_Visibility);
+		
+		if (Company_Visibility_dropdown3.isEnabled()) 
+		{
+			System.out.println("Company Visibility dropdown is enabled");
+		}else {
+			System.out.println("Company Visibility dropdown is deseble");
+		}
+		
+		WebElement Company_Onboarding1_dropdown3=driver.findElement(SiteAdminLocatores.Company_Onboarding);
+
+
+		if (Company_Onboarding1_dropdown3.isDisplayed()) 
+		{
+			System.out.println("Company Onboarding1 dropdown is enabled");
+		}else {
+			System.out.println("Company Onboarding1 dropdown is deseble");
+		}
+
+
+
+
+
 
 	}
 }

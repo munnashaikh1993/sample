@@ -1,87 +1,89 @@
 package SiteAdmin;
 
+import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
-
-
 
 import Browsers.Browser;
 
 public class BL_TC_14_Site extends Browser{
-////tr[contains(@class,'ng-star-inserted')]//span[text()=' Room 4']/../..//td[@class='ng-star-inserted']//span[contains(@class,'margin-right ')]
+	public static void Update_all_status() throws Exception 
+	{
+		System.out.println("***************************BL_TC_14_Site****************************************");
+		driver.manage().timeouts().implicitlyWait(15000, TimeUnit.SECONDS);
+		Thread.sleep(3000);
+		
+		//Companies
+		driver.findElement(By.xpath("//a[text()='Companies']")).click();
+		Thread.sleep(2000);
+		
+		//Company Card View icon
+		driver.findElement(SiteAdminLocatores.Company_Card_View).click();
+		driver.manage().timeouts().implicitlyWait(10000, TimeUnit.SECONDS);
+		Thread.sleep(2000);
+		
+		//LEARN MORE
+		driver.findElement(By.xpath("//h5[text()='Cashew Owner']/../..//button[text()=' LEARN MORE ']")).click();
+		Thread.sleep(2000);
+		
+		//status
+		List<WebElement> curentstatus=driver.findElements(SiteAdminLocatores.status);
+		
+		for(WebElement ss:curentstatus) 
+		{
+			System.out.println(ss.getText());
+		}
+		Thread.sleep(2000);
+		
+		//Click on Admin
+		driver.findElement(SiteAdminLocatores.Admin).click();
+		driver.manage().timeouts().implicitlyWait(10000, TimeUnit.SECONDS);
+		Thread.sleep(2000);
+		
+		//company status
+		WebElement company_status_dopdown=driver.findElement(SiteAdminLocatores.company_status);
+		
+		Actions act=new Actions(driver);
+		
+		act.click(company_status_dopdown).perform();
+		act.sendKeys(Keys.ARROW_DOWN).perform();
+		act.sendKeys(Keys.ARROW_DOWN).perform();
+		act.sendKeys(Keys.ENTER).perform();
+		Thread.sleep(1000);
+		
+		//Add note button
+		driver.manage().timeouts().implicitlyWait(10000, TimeUnit.SECONDS);
+		driver.findElement(SiteAdminLocatores.Add_Notes).click();
+		Thread.sleep(2000);
+		
+		//text area
+		driver.findElement(SiteAdminLocatores.text_area).sendKeys("Demo Test Demo Test Demo Test");
+		Thread.sleep(2000);
+		
+		//click on save button
+		driver.findElement(SiteAdminLocatores.Save_button).click();
+		Thread.sleep(2000);
+		
+		//click on update button
+		driver.findElement(SiteAdminLocatores.update_button).click();
+		
+		driver.manage().timeouts().implicitlyWait(15000, TimeUnit.SECONDS);
+		Thread.sleep(5000);
+		List<WebElement> afterstatus=driver.findElements(SiteAdminLocatores.status);
+		System.out.println();
+		System.out.println();
+		for(WebElement dd:afterstatus) 
+		{
+		
+			System.out.println(dd.getText());
+		}
+		
+		
+		
 
-  public static void Configuration() throws Exception  
-         {
-	           System.out.println("***************************BL_TC_14****************************************");
-	           driver.manage().timeouts().implicitlyWait(15000, TimeUnit.SECONDS);
-	           Thread.sleep(4000);
-	           
-	           //Configuration
-	           driver.findElement(SiteAdminLocatores.Configuration).click(); 
-	           Thread.sleep(2000);
-	           
-	           //Add row
-	           driver.findElement(SiteAdminLocatores.Add_row).click();
-	           Thread.sleep(2000);
-	           
-	           //Name
-	           String name="Room 1";
-	           driver.findElement(SiteAdminLocatores.Name).sendKeys(name);
-	           Thread.sleep(2000);
-	           
-	           //Capacity
-	           driver.findElement(SiteAdminLocatores.Capacity).sendKeys("20");
-	           Thread.sleep(2000);
-	           
-	           //Space
-	           driver.findElement(SiteAdminLocatores.Space).sendKeys("1500");
-	           Thread.sleep(2000);
-	           
-	           //Notes
-	           driver.findElement(SiteAdminLocatores.Notes).sendKeys("Test Test Test");
-	           Thread.sleep(2000);
-	           
-	           driver.findElement(SiteAdminLocatores.right_tick_mark1).click();
-	           Thread.sleep(2000);
-	           
-	           driver.findElement(By.xpath("//span[contains(text(),'"+name+"')]/../..//li[@class='fa fa-edit']")).click();
-	           Thread.sleep(2000);
-	           
-	            name="Hall 1";
-	            driver.findElement(SiteAdminLocatores.Name).clear();
-	           driver.findElement(SiteAdminLocatores.Name).sendKeys(name);
-	           Thread.sleep(2000);
-	           
-	           //Capacity
-	           driver.findElement(SiteAdminLocatores.Capacity).clear();
-	           driver.findElement(SiteAdminLocatores.Capacity).sendKeys("15");
-	           Thread.sleep(2000);
-	           
-	           //Space
-	           driver.findElement(SiteAdminLocatores.Space).clear();
-	           driver.findElement(SiteAdminLocatores.Space).sendKeys("2000");
-	           Thread.sleep(2000);
-	           
-	           //Notes
-	           driver.findElement(SiteAdminLocatores.Notes).clear();
-	           driver.findElement(SiteAdminLocatores.Notes).sendKeys("Demo Demo Demo");
-	           Thread.sleep(2000);
-	           
-	           
-	           driver.findElement(SiteAdminLocatores.Edit_right_tick_mark).click();
-	           Thread.sleep(2000);
-	           
-	           driver.findElement(By.xpath("//span[ contains(text(),'"+name+"')]/../..//li[@class='fa fa-trash']")).click();
-	           Thread.sleep(2000);
-	           
-	         WebElement del=  driver.findElement(By.xpath("//button[text()='Delete']"));
-	          Thread.sleep(2000);
-	         Actions act=new Actions(driver);
-	         act.moveToElement(del).perform();
-	         act.click(del).perform();
-	           
-         }
+	}
 }
