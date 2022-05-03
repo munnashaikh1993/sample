@@ -10,25 +10,26 @@ import Browsers.Browser;
 
 public class BL_TC_01_Resident extends Browser{
 
-	public static void Dashboard() throws InterruptedException {
-		System.out.println("***************************BL_TC_01****************************************");
+	public static void Resdident_dashboard() throws InterruptedException 
+	{
+		System.out.println("***************************BL_TC_01_Resident_Admin****************************************");
 		driver.manage().timeouts().implicitlyWait(15000, TimeUnit.SECONDS);
 		Thread.sleep(4000);
 
 
 		//click on my company
-		driver.findElement(locators.comapny).click();
+		driver.findElement(By.xpath("//a[text() = 'My Company']")).click();
 
 		Thread.sleep(5000);
 
 
 		//onboarding information
-		driver.findElement(By.xpath("//a[text()= 'Onboarding Information']")).click();
+		driver.findElement(By.xpath("//a[text()='Company Data']")).click();
 		Thread.sleep(4000);
 
 
 		//invoicing
-		driver.findElement(By.xpath("//a[text()= 'Invoicing']")).click();
+		driver.findElement(By.xpath("//a[text()='Invoicing']")).click();
 		Thread.sleep(4000);
 
 		//change request
@@ -62,6 +63,11 @@ public class BL_TC_01_Resident extends Browser{
 		//site companies
 		driver.findElement(By.xpath("	//a[text()= 'Site Companies']")).click();
 		Thread.sleep(4000);
+
+		//site companies
+		driver.findElement(By.xpath("//a[@routerlink='directory-sponsors']")).click();
+		Thread.sleep(4000);
+
 
 		//				//learn more 
 		//				driver.findElement(By.xpath("(//button[text() = ' LEARN MORE '])[1]")).click();

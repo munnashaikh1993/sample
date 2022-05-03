@@ -8,16 +8,19 @@ import Browsers.Browser;
 import Home.HomePage;
 import Login.Login;
 import LogoutAndClose.Logout;
-import Sponsor.BL_TC_01;
-import Sponsor.BL_TC_02;
-import Sponsor.BL_TC_03;
-import Sponsor.BL_TC_05;
-import Sponsor.BL_TC_07;
-import Sponsor.BL_TC_09;
-import Sponsor.BL_TC_10;
-import Sponsor.BL_TC_11;
-import Sponsor.BL_TC_13;
-import Sponsor.BL_TC_14;
+import Sponsor.BL_TC_01_Sponsor;
+import Sponsor.BL_TC_02_Sponsor;
+import Sponsor.BL_TC_04_Sponsor;
+import Sponsor.BL_TC_05_Sponsor;
+import Sponsor.BL_TC_06_Sponsor;
+import Sponsor.BL_TC_08_Sponsor;
+import Sponsor.BL_TC_09_Sponsor;
+import Sponsor.BL_TC_10_Sponsor;
+import Sponsor.BL_TC_11_Sponsor;
+import Sponsor.BL_TC_12_Sponsor;
+import Sponsor.BL_TC_13_Sponsor;
+import Sponsor.BL_TC_14_Sponsor;
+import Sponsor.BL_TC_15_Sponsor;
 import org.testng.annotations.BeforeTest;
 import org.testng.Reporter;
 import org.testng.annotations.AfterTest;
@@ -25,17 +28,17 @@ import org.testng.annotations.AfterTest;
 public class SponsorRegressionTest {
 
 	@BeforeTest
-	public void afterTest() throws Throwable {
-		System.out.println("inside Login page");
+	public void bforeterTest() throws Throwable {
+//		System.out.println("inside Login page");
 
 		//Launch Browser
-		Browser.chromeBrowser();
-
-		//Method for validate Biolab application method
-		Biolab.launchBiolabApplication();
-
-		//Method for validate Biolabs member login method
-		HomePage.clickBioLabsMemberLogIn();
+//		Browser.chromeBrowser();
+//
+//		//Method for validate Biolab application method
+//		Biolab.launchBiolabApplication();
+//
+//		//Method for validate Biolabs member login method
+//		HomePage.clickBioLabsMemberLogIn();
 
 		//Method for validate sponsor Login method
 		Login.sponsorLogin();     
@@ -43,127 +46,133 @@ public class SponsorRegressionTest {
 
 	}
 	@Test(priority = 0, groups = "test1")
-	public void biolabBysite() throws Exception {
+	public void recentJoinTest() throws Exception {
 		System.out.println("**************************SPONSOR ADMIN**************************");
 
-		Reporter.log("BL_TC_02",true);
-
-		System.out.println("inside Biolab site");
-
-		System.out.println("BL_TC_02");   
-		BL_TC_02.BioLabsBySite();
+		//Reporter.log("BL_TC_06_Sponsor",true);
+		BL_TC_06_Sponsor.recentJoin();
 
 	}
 
 	@Test(priority = 1, groups = "test2")
-	public void bioLabs_global_network() throws Exception {
-		Reporter.log("BL_TC_02",true);  
-		System.out.println("inside Biolab Global network");
-		System.out.println("BL_TC_02");
-		BL_TC_02.BioLabs_Global_Network();
+	public void titleVisibilityTest() throws Exception {
+		 
+		BL_TC_01_Sponsor.titleVisibility();
 	}
 
 	@Test (priority = 2)
-	public void titleVisibility() throws Exception
+	public void BioLabs_Global_NetworkTest() throws Exception
 	{
-		Reporter.log("BL_TC_01",true);
-		System.out.println("BL_TC_01");
-		BL_TC_01.titleVisibility();
+		
+		BL_TC_02_Sponsor.BioLabs_Global_Network();
 	}
 
 
 	@Test (priority = 3)
-	public void mapvisibility() throws Exception
+	public void visibilityMapTest() throws Exception
 	{
-		Reporter.log("BL_TC_03",true);
-		System.out.println("BL_TC_03");
-		BL_TC_03.visibilityMap();
+		
+		BL_TC_04_Sponsor.visibilityMap();
 	}
 
 	@Test (priority = 4)
-	public void locationTab() throws Exception
+	public void sponsorsrchpagTest() throws Exception
 	{
-		Reporter.log("BL_TC_07",true);
-		System.out.println("BL_TC_07");
-		BL_TC_07.LocationSelection();
+		
+		BL_TC_05_Sponsor.sponsorsrchpag();
 	}
 
 
 
-	@Test (priority = 6)
-	public void companyGrowth() throws Exception
+	@Test (priority = 5)
+	public void LocationSelectionTest() throws Exception
 	{
 
-		//Biolabnetwork.biolnetwork();
-		System.out.println("BL_TC_09");
-		BL_TC_09.searchpage();
+		
+		BL_TC_08_Sponsor.LocationSelection();
+
+
+	}
+
+	@Test (priority = 6)
+	public void searchpageTest() throws Exception
+	{
+
+		
+		BL_TC_09_Sponsor.searchpage();
 
 
 	}
 
 	@Test (priority = 7)
-	public void sponsorsearchTest() throws Exception
+	public void CheckChangesRefreshTest() throws Exception
 	{
 
-		//Biolabnetwork.biolnetwork();
-		System.out.println("BL_TC_05");
-		BL_TC_05.sponsorsrchpag();
+		
+		BL_TC_10_Sponsor.CheckChangesRefresh();
 
 
 	}
 
 	@Test (priority = 8)
-	public void Search() throws Exception
+	public void searchTest() throws Exception
 	{
 
-		//Biolabnetwork.biolnetwork();
-		System.out.println("BL_TC_10");
-		BL_TC_10.search();
+		
+		BL_TC_11_Sponsor.search();
 
 
 	}
 
 	@Test (priority = 9)
-	public void visibilityTest() throws Exception
+	public void visiblityTest() throws Exception
 	{
 
-		//Biolabnetwork.biolnetwork();
-		System.out.println("BL_TC_11");
-		BL_TC_11.visiblity();
+		Reporter.log("BL_TC_12_Sponsor",true);
+		BL_TC_12_Sponsor.visiblity();
 
 
 	}
+
 
 	@Test (priority = 10)
-	public void companyprofileTest() throws Exception
+	public void All_SummaryTest() throws Exception
 	{
 
-		//Biolabnetwork.biolnetwork();
-		System.out.println("BL_TC_13");
-		BL_TC_13.companyProfile();
+		
+		BL_TC_13_Sponsor.All_Summary();
 
 
 	}
 
-
 	@Test (priority = 11)
+	public void companyProfileTest() throws Exception
+	{
+
+		
+		BL_TC_14_Sponsor.companyProfile();
+
+
+	}
+	
+	
+	@Test (priority = 12)
 	public void verifyCompanyGrowthTest() throws Exception
 	{
 
-		//Biolabnetwork.biolnetwork();
-		System.out.println("BL_TC_14");
-		BL_TC_14.verifyCompanyGrowth();
+		
+		BL_TC_15_Sponsor.verifyCompanyGrowth();
 
 
 	}
-
-
+	
 
 
 	@AfterTest
 	public  void closeactivity() throws Exception
 	{
 		Logout.logoutApplication();
+		Logout.Close();
 	}
 
 

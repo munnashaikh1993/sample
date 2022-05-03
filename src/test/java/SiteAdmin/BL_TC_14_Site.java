@@ -37,6 +37,8 @@ public class BL_TC_14_Site extends Browser{
 		{
 			System.out.println(ss.getText());
 		}
+		
+		driver.manage().timeouts().implicitlyWait(30000, TimeUnit.SECONDS);
 		Thread.sleep(2000);
 		
 		//Click on Admin

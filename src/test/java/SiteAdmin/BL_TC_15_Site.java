@@ -36,37 +36,38 @@ public class BL_TC_15_Site extends Browser
 		driver.findElement(SiteAdminLocatores.Admin).click();
 		Thread.sleep(2000);
 		
-		//forward application button
-		try {
-			WebElement FAB= driver.findElement(SiteAdminLocatores.forwar_application_button);
-			FAB.click();
-			Thread.sleep(2000);
-			//Site dropdown
-			WebElement SD= driver.findElement(By.xpath("//select[@id='dropdownOption']"));
-			
-			Actions act=new Actions(driver);
-			act.moveToElement(SD).perform();
-			act.click(SD).perform();
-			act.sendKeys(Keys.ARROW_DOWN).perform();
-			act.sendKeys(Keys.ARROW_DOWN).perform();
-			act.sendKeys(Keys.ARROW_DOWN).perform();
-			act.sendKeys(Keys.ENTER).perform();	
-			Thread.sleep(1000);
-			
-			//Forward button
-			driver.findElement(By.xpath("//button[text()='Forward']")).click();
-			Thread.sleep(1000);
-			
-			driver.findElement(By.xpath("//button[text()='OK']")).click();
-			
-		} catch (Exception e) {
-			if (true) {
-				System.out.println("This button is not visible");
-			}
-			
+		WebElement F=driver.findElement(By.xpath("//button[@class='btn biolabBtn ml-2 ng-star-inserted']"));
 		
-		}
-		Thread.sleep(1000);
+		//forward application button
+		if (F.isEnabled()) {
+			System.out.println("salman");
+		}else {
+			
+		     System.out.println("Button is not clickeble");
+			//WebElement FAB= driver.findElement(SiteAdminLocatores.forwar_application_button);
+			//FAB.click();
+//			Thread.sleep(2000);
+//			//Site dropdown
+//			WebElement SD= driver.findElement(By.xpath("//select[@id='dropdownOption']"));
+//			
+//			Actions act=new Actions(driver);
+//			act.moveToElement(SD).perform();
+//			act.click(SD).perform();
+//			act.sendKeys(Keys.ARROW_DOWN).perform();
+//			act.sendKeys(Keys.ARROW_DOWN).perform();
+//			act.sendKeys(Keys.ARROW_DOWN).perform();
+//			act.sendKeys(Keys.ENTER).perform();	
+//			Thread.sleep(1000);
+//			
+//			//Forward button
+//			driver.findElement(By.xpath("//button[text()='Forward']")).click();
+//			Thread.sleep(1000);
+//			
+//			driver.findElement(By.xpath("//button[text()='OK']")).click();
+			
+		} 
+				
+		
 		
 		
 	}

@@ -64,7 +64,8 @@ public class BL_TC_07_Site extends Browser{
 		act.click(Company_Visibility_dropdown).perform();
 		act.sendKeys(Keys.ARROW_DOWN).perform();
 		act.sendKeys(Keys.ENTER).perform();
-		driver.manage().timeouts().implicitlyWait(10000, TimeUnit.SECONDS);
+		
+		driver.manage().timeouts().implicitlyWait(30000, TimeUnit.SECONDS);
 		Thread.sleep(4000);
 		
 		driver.findElement(SiteAdminLocatores.Invoicing_Waitlist).click();
@@ -73,16 +74,17 @@ public class BL_TC_07_Site extends Browser{
 		//click on companies tab
 		driver.findElement(By.xpath("//a[text()='Companies']")).click();
 		driver.manage().timeouts().implicitlyWait(10000, TimeUnit.SECONDS);
-		Thread.sleep(1000);
+		Thread.sleep(3000);
 		
 		//Clear Button
 		driver.findElement(SiteAdminLocatores.Clear).click();
-		Thread.sleep(1000);
+		driver.manage().timeouts().implicitlyWait(30000, TimeUnit.SECONDS);
+		Thread.sleep(3000);
 
 		//Click on Company card view Icon
 		driver.findElement(SiteAdminLocatores.Company_Card_View).click();
 		driver.manage().timeouts().implicitlyWait(10000, TimeUnit.SECONDS);
-		Thread.sleep(1000);
+		Thread.sleep(2000);
 
 		//Company Status
 		WebElement Company_Status_dropdown1=driver.findElement(SiteAdminLocatores.Company_Status);

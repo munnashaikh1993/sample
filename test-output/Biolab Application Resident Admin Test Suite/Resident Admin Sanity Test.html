@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Resident Admin Sanity Test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>10/0/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>9/2/0</td>
 </tr><tr>
-<td>Started on:</td><td>Mon Mar 21 14:21:15 IST 2022</td>
+<td>Started on:</td><td>Thu Apr 28 13:37:37 IST 2022</td>
 </tr>
-<tr><td>Total time:</td><td>309 seconds (309191 ms)</td>
+<tr><td>Total time:</td><td>239 seconds (239486 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,6 +67,164 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='MainClass.ResidentUserRegressionTest.SponsorProfile_Test()'><b>SponsorProfile_Test</b><br>Test class: MainClass.ResidentUserRegressionTest</td>
+<td><div><pre>org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;a _ngcontent-mcx-c109=&quot;&quot; data-toggle=&quot;modal&quot; data-target=&quot;#forwardapplication&quot; class=&quot;btn biolabBtn btnconnect btn-xl disabled&quot;&gt;...&lt;/a&gt; is not clickable at point (930, 511). Other element would receive the click: &lt;div _ngcontent-mcx-c14=&quot;&quot; class=&quot;ngx-spinner-overlay ng-tns-c14-0 ng-trigger ng-trigger-fadeIn ng-star-inserted&quot; style=&quot;background-color: rgba(51, 51, 51, 0.8); z-index: 99999; position: fixed; opacity: 1;&quot;&gt;...&lt;/div&gt;
+  (Session info: chrome=100.0.4896.127)
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;SALMANS&apos;, ip: &apos;192.168.100.110&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;16.0.2&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 100.0.4896.127, chrome: {chromedriverVersion: 100.0.4896.60 (6a5d10861ce8..., userDataDir: C:\Users\SALMAN~1.SHA\AppDa...}, goog:chromeOptions: {debuggerAddress: localhost:55684}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 5ada15d0022161087cee83590630d0a7
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
+	at ResidentUser.BL_TC_06_ResidentUser.SponsorProfile(BL_TC_06_ResidentUser.java:53)
+	at MainClass.ResidentUserRegressionTest.SponsorProfile_Test(ResidentUserRegressionTest.java:74)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 33 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace576261694", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace576261694'><pre>org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;a _ngcontent-mcx-c109=&quot;&quot; data-toggle=&quot;modal&quot; data-target=&quot;#forwardapplication&quot; class=&quot;btn biolabBtn btnconnect btn-xl disabled&quot;&gt;...&lt;/a&gt; is not clickable at point (930, 511). Other element would receive the click: &lt;div _ngcontent-mcx-c14=&quot;&quot; class=&quot;ngx-spinner-overlay ng-tns-c14-0 ng-trigger ng-trigger-fadeIn ng-star-inserted&quot; style=&quot;background-color: rgba(51, 51, 51, 0.8); z-index: 99999; position: fixed; opacity: 1;&quot;&gt;...&lt;/div&gt;
+  (Session info: chrome=100.0.4896.127)
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;SALMANS&apos;, ip: &apos;192.168.100.110&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;16.0.2&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 100.0.4896.127, chrome: {chromedriverVersion: 100.0.4896.60 (6a5d10861ce8..., userDataDir: C:\Users\SALMAN~1.SHA\AppDa...}, goog:chromeOptions: {debuggerAddress: localhost:55684}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 5ada15d0022161087cee83590630d0a7
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:78)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
+	at ResidentUser.BL_TC_06_ResidentUser.SponsorProfile(BL_TC_06_ResidentUser.java:53)
+	at MainClass.ResidentUserRegressionTest.SponsorProfile_Test(ResidentUserRegressionTest.java:74)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1207)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>22</td>
+<td>MainClass.ResidentUserRegressionTest@6ad82709</td></tr>
+<tr>
+<td title='MainClass.ResidentUserRegressionTest.dashboard_Test()'><b>dashboard_Test</b><br>Test class: MainClass.ResidentUserRegressionTest</td>
+<td><div><pre>org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;a _ngcontent-mcx-c13=&quot;&quot; href=&quot;/resident-companies/159/invoicing&quot; routerlinkactive=&quot;active&quot; class=&quot;nav-link font-weight-bold&quot;&gt;...&lt;/a&gt; is not clickable at point (325, 126). Other element would receive the click: &lt;div _ngcontent-mcx-c14=&quot;&quot; class=&quot;ngx-spinner-overlay ng-tns-c14-0 ng-trigger ng-trigger-fadeIn ng-star-inserted&quot; style=&quot;background-color: rgba(51, 51, 51, 0.8); z-index: 99999; position: fixed; opacity: 1;&quot;&gt;...&lt;/div&gt;
+  (Session info: chrome=100.0.4896.127)
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;SALMANS&apos;, ip: &apos;192.168.100.110&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;16.0.2&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 100.0.4896.127, chrome: {chromedriverVersion: 100.0.4896.60 (6a5d10861ce8..., userDataDir: C:\Users\SALMAN~1.SHA\AppDa...}, goog:chromeOptions: {debuggerAddress: localhost:55684}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 5ada15d0022161087cee83590630d0a7
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
+	at ResidentUser.BL_TC_01_ResidentUser.dashboard(BL_TC_01_ResidentUser.java:37)
+	at MainClass.ResidentUserRegressionTest.dashboard_Test(ResidentUserRegressionTest.java:44)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 33 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1775897362", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1775897362'><pre>org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;a _ngcontent-mcx-c13=&quot;&quot; href=&quot;/resident-companies/159/invoicing&quot; routerlinkactive=&quot;active&quot; class=&quot;nav-link font-weight-bold&quot;&gt;...&lt;/a&gt; is not clickable at point (325, 126). Other element would receive the click: &lt;div _ngcontent-mcx-c14=&quot;&quot; class=&quot;ngx-spinner-overlay ng-tns-c14-0 ng-trigger ng-trigger-fadeIn ng-star-inserted&quot; style=&quot;background-color: rgba(51, 51, 51, 0.8); z-index: 99999; position: fixed; opacity: 1;&quot;&gt;...&lt;/div&gt;
+  (Session info: chrome=100.0.4896.127)
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;SALMANS&apos;, ip: &apos;192.168.100.110&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;16.0.2&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 100.0.4896.127, chrome: {chromedriverVersion: 100.0.4896.60 (6a5d10861ce8..., userDataDir: C:\Users\SALMAN~1.SHA\AppDa...}, goog:chromeOptions: {debuggerAddress: localhost:55684}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 5ada15d0022161087cee83590630d0a7
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:78)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
+	at ResidentUser.BL_TC_01_ResidentUser.dashboard(BL_TC_01_ResidentUser.java:37)
+	at MainClass.ResidentUserRegressionTest.dashboard_Test(ResidentUserRegressionTest.java:44)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1207)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>29</td>
+<td>MainClass.ResidentUserRegressionTest@6ad82709</td></tr>
+</table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
@@ -75,55 +233,50 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='MainClass.ResidentRegressionTest.change_Test()'><b>change_Test</b><br>Test class: MainClass.ResidentRegressionTest</td>
-<td></td>
-<td>12</td>
-<td>MainClass.ResidentRegressionTest@6e509ffa</td></tr>
-<tr>
-<td title='MainClass.ResidentRegressionTest.onboardinginformation_Test()'><b>onboardinginformation_Test</b><br>Test class: MainClass.ResidentRegressionTest</td>
-<td></td>
-<td>8</td>
-<td>MainClass.ResidentRegressionTest@6e509ffa</td></tr>
-<tr>
-<td title='MainClass.ResidentRegressionTest.ResidentStaff_Test()'><b>ResidentStaff_Test</b><br>Test class: MainClass.ResidentRegressionTest</td>
-<td></td>
-<td>29</td>
-<td>MainClass.ResidentRegressionTest@6e509ffa</td></tr>
-<tr>
-<td title='MainClass.ResidentRegressionTest.Dashboard_Test()'><b>Dashboard_Test</b><br>Test class: MainClass.ResidentRegressionTest</td>
+<td title='MainClass.ResidentUserRegressionTest.profile_Test()'><b>profile_Test</b><br>Test class: MainClass.ResidentUserRegressionTest</td>
 <td></td>
 <td>23</td>
-<td>MainClass.ResidentRegressionTest@6e509ffa</td></tr>
+<td>MainClass.ResidentUserRegressionTest@6ad82709</td></tr>
 <tr>
-<td title='MainClass.ResidentRegressionTest.sitemembers_Test()'><b>sitemembers_Test</b><br>Test class: MainClass.ResidentRegressionTest</td>
-<td></td>
-<td>92</td>
-<td>MainClass.ResidentRegressionTest@6e509ffa</td></tr>
-<tr>
-<td title='MainClass.ResidentRegressionTest.LearnMore_Test()'><b>LearnMore_Test</b><br>Test class: MainClass.ResidentRegressionTest</td>
-<td></td>
-<td>54</td>
-<td>MainClass.ResidentRegressionTest@6e509ffa</td></tr>
-<tr>
-<td title='MainClass.ResidentRegressionTest.onboarding_Test()'><b>onboarding_Test</b><br>Test class: MainClass.ResidentRegressionTest</td>
-<td></td>
-<td>8</td>
-<td>MainClass.ResidentRegressionTest@6e509ffa</td></tr>
-<tr>
-<td title='MainClass.ResidentRegressionTest.CompanyInformation_Test()'><b>CompanyInformation_Test</b><br>Test class: MainClass.ResidentRegressionTest</td>
-<td></td>
-<td>50</td>
-<td>MainClass.ResidentRegressionTest@6e509ffa</td></tr>
-<tr>
-<td title='MainClass.ResidentRegressionTest.invoice_Test()'><b>invoice_Test</b><br>Test class: MainClass.ResidentRegressionTest</td>
-<td></td>
-<td>8</td>
-<td>MainClass.ResidentRegressionTest@6e509ffa</td></tr>
-<tr>
-<td title='MainClass.ResidentRegressionTest.sitecompanies_Test()'><b>sitecompanies_Test</b><br>Test class: MainClass.ResidentRegressionTest</td>
+<td title='MainClass.ResidentUserRegressionTest.invoice_Test()'><b>invoice_Test</b><br>Test class: MainClass.ResidentUserRegressionTest</td>
 <td></td>
 <td>12</td>
-<td>MainClass.ResidentRegressionTest@6e509ffa</td></tr>
+<td>MainClass.ResidentUserRegressionTest@6ad82709</td></tr>
+<tr>
+<td title='MainClass.ResidentUserRegressionTest.CompanyInformation_Test()'><b>CompanyInformation_Test</b><br>Test class: MainClass.ResidentUserRegressionTest</td>
+<td></td>
+<td>9</td>
+<td>MainClass.ResidentUserRegressionTest@6ad82709</td></tr>
+<tr>
+<td title='MainClass.ResidentUserRegressionTest.change_Test()'><b>change_Test</b><br>Test class: MainClass.ResidentUserRegressionTest</td>
+<td></td>
+<td>4</td>
+<td>MainClass.ResidentUserRegressionTest@6ad82709</td></tr>
+<tr>
+<td title='MainClass.ResidentUserRegressionTest.Company_Profile_Test()'><b>Company_Profile_Test</b><br>Test class: MainClass.ResidentUserRegressionTest</td>
+<td></td>
+<td>31</td>
+<td>MainClass.ResidentUserRegressionTest@6ad82709</td></tr>
+<tr>
+<td title='MainClass.ResidentUserRegressionTest.sitestaff_Test()'><b>sitestaff_Test</b><br>Test class: MainClass.ResidentUserRegressionTest</td>
+<td></td>
+<td>8</td>
+<td>MainClass.ResidentUserRegressionTest@6ad82709</td></tr>
+<tr>
+<td title='MainClass.ResidentUserRegressionTest.site_members_Test()'><b>site_members_Test</b><br>Test class: MainClass.ResidentUserRegressionTest</td>
+<td></td>
+<td>16</td>
+<td>MainClass.ResidentUserRegressionTest@6ad82709</td></tr>
+<tr>
+<td title='MainClass.ResidentUserRegressionTest.sitecompanies_Test()'><b>sitecompanies_Test</b><br>Test class: MainClass.ResidentUserRegressionTest</td>
+<td></td>
+<td>8</td>
+<td>MainClass.ResidentUserRegressionTest@6ad82709</td></tr>
+<tr>
+<td title='MainClass.ResidentUserRegressionTest.companydata_Test()'><b>companydata_Test</b><br>Test class: MainClass.ResidentUserRegressionTest</td>
+<td></td>
+<td>7</td>
+<td>MainClass.ResidentUserRegressionTest@6ad82709</td></tr>
 </table><p>
 </body>
 </html>

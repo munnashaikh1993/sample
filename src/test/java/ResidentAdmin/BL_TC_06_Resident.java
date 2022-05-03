@@ -1,6 +1,8 @@
 package ResidentAdmin;
 
 
+import java.util.concurrent.TimeUnit;
+
 import org.openqa.selenium.By;
 
 import Browsers.Browser;
@@ -8,42 +10,30 @@ import Browsers.Browser;
 
 public class BL_TC_06_Resident extends Browser {
 
-	public static void myprofile() throws InterruptedException {
+	public static void SponsorProfile() throws Exception {
 
-
-		System.out.println("***************************BL_TC_06****************************************");
-
-		//click on myprofile
-
-		Thread.sleep(8000);
-		driver.findElement(locators.myprofile).click();
-		Thread.sleep(2000);
-
-		//click on edit profile
-		driver.findElement(locators.Editprofile).click();
-		Thread.sleep(2000);
-
-		//click on first name
-		driver.findElement(locators.firstname).clear();
-		driver.findElement(locators.firstname).sendKeys("priyanka");
-		Thread.sleep(2000);
-
-		//Click on lastname	
-		driver.findElement(locators.lastname).clear();
-		driver.findElement(locators.lastname).sendKeys("Malviya prasad");
-		Thread.sleep(2000);
-
-		//Click on title
-		driver.findElement(locators.Title).clear();
-		driver.findElement(locators.Title).sendKeys("QA");
-		Thread.sleep(2000);
-
-		//Click on Phone number
-		driver.findElement(locators.phoneNumber).clear();
-		driver.findElement(locators.phoneNumber).sendKeys("9876543210");
-		Thread.sleep(2000);
-
-		driver.findElement(By.xpath("//Button[text()=' Update Profile ']")).click();
-		Thread.sleep(2000);
-	}
+		System.out.println("***************************BL_TC_06_Resident_Admin****************************************");
+		//click on directory
+		  driver.manage().timeouts().implicitlyWait(10000, TimeUnit.SECONDS);
+	        Thread.sleep(2000);
+	        driver.findElement(By.xpath("//a[text()='Directory']")).click();
+		
+		
+		        //click on Site Sponsor button
+		        driver.manage().timeouts().implicitlyWait(10000, TimeUnit.SECONDS);
+		        Thread.sleep(2000);
+				driver.findElement(By.xpath("//a[text()='Site Sponsors']")).click();
+				  driver.manage().timeouts().implicitlyWait(3000, TimeUnit.SECONDS);
+				
+				
+		        //click on learn more button	
+				  driver.manage().timeouts().implicitlyWait(10000, TimeUnit.SECONDS);
+				  Thread.sleep(2000);
+				driver.findElement(By.xpath("(//button[text()=' LEARN MORE '])[1]")).click();
+				  driver.manage().timeouts().implicitlyWait(3000, TimeUnit.SECONDS);
+				
+				
+				
+				
+}
 }

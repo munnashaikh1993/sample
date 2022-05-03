@@ -8,19 +8,21 @@
     <classes>
       <class name="MainClass.SponsorRegressionTest">
         <methods>
-          <include name="companyprofileTest"/>
           <include name="afterTest"/>
-          <include name="companyGrowth"/>
-          <include name="visibilityTest"/>
-          <include name="Search"/>
+          <include name="CheckChangesRefreshTest"/>
+          <include name="All_SummaryTest"/>
+          <include name="recentJoinTest"/>
           <include name="closeactivity"/>
-          <include name="biolabBysite"/>
-          <include name="titleVisibility"/>
+          <include name="companyProfileTest"/>
+          <include name="searchTest"/>
           <include name="verifyCompanyGrowthTest"/>
-          <include name="sponsorsearchTest"/>
-          <include name="locationTab"/>
-          <include name="bioLabs_global_network"/>
-          <include name="mapvisibility"/>
+          <include name="searchpageTest"/>
+          <include name="LocationSelectionTest"/>
+          <include name="titleVisibilityTest"/>
+          <include name="BioLabs_Global_NetworkTest"/>
+          <include name="visiblityTest"/>
+          <include name="sponsorsrchpagTest"/>
+          <include name="visibilityMapTest"/>
         </methods>
       </class> <!-- MainClass.SponsorRegressionTest -->
     </classes>

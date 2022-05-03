@@ -7,8 +7,9 @@ import Browsers.Browser;
 import Home.HomePage;
 import Login.Login;
 import LogoutAndClose.Logout;
-import Sponsor.BL_TC_04;
-import Sponsor.BL_TC_08;
+import Sponsor.BL_TC_03_Sponsor;
+
+
 
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.AfterTest;
@@ -18,7 +19,15 @@ public class SponsorRegressionTest1
 	@BeforeTest
 	public void beforeTest() 
 	{
-		
+		//Launch Browser
+		Browser.chromeBrowser();
+
+		//Method for validate Biolab application method
+		Biolab.launchBiolabApplication();
+
+		//Method for validate Biolabs member login method
+		HomePage.clickBioLabsMemberLogIn();
+
 		Login.sponsorLogin();
 		
 	}
@@ -27,7 +36,7 @@ public class SponsorRegressionTest1
 	@Test(priority = 0)
 	public void recentJoin_Test() throws Exception 
 	{
-		BL_TC_04.recentJoin();
+		BL_TC_03_Sponsor.findAvalablesite();
 	}
 
 

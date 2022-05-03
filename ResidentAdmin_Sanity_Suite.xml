@@ -4,7 +4,7 @@
 	
 	<test name="Resident Admin Sanity Test">
 		<classes>
-			<class name="MainClass.ResidentRegressionTest" />
+			<class name="MainClass.ResidentAdminRegressionTest" />
 		</classes>
 	</test>
 	<!-- Test -->

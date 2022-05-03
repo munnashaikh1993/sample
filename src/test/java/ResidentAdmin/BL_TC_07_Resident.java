@@ -20,39 +20,37 @@ import Browsers.Browser;
 
 public class BL_TC_07_Resident extends Browser{
 
-public static void dd() throws Exception {
-	driver.manage().timeouts().implicitlyWait(15000, TimeUnit.SECONDS);
-	Thread.sleep(5000);
-	
-	driver.findElement(By.xpath("//a[text()='My Company']")).click();
-	Thread.sleep(2000);
-	
-	driver.findElement(By.xpath("//a[text()='Onboarding Information']")).click();
-	Thread.sleep(2000);
-	
-	WebElement ss= driver.findElement(By.xpath("//a[@id='additional-accordion']"));
-	Actions act=new Actions(driver);
-	act.moveToElement(ss).perform();
-	act.click(ss).build().perform();
-	Thread.sleep(2000);
-	
-	driver.findElement(By.xpath("//strong[text()='Leadership/Management Team']")).click();
-	Thread.sleep(2000);
-	
-	driver.findElement(By.xpath("//strong[text()='Leadership/Management Team']/../../../..//strong[text()='ADD']")).click();
-	Thread.sleep(2000);
-	
-	driver.findElement(By.xpath("(//strong[text()=' Team Member   '])[2]")).click();
-	Thread.sleep(2000);
-	
-	driver.findElement(By.xpath("(//strong[text()='Leadership/Management Team']/../../../..//input[@formcontrolname=\"name\" and @type=\"text\"])[2]")).sendKeys("salman");
-	Thread.sleep(2000);
-	
-	driver.findElement(By.xpath("(//strong[text()='Leadership/Management Team']/../../../..//input[@formcontrolname=\"title\"])[2]")).click();
-	Thread.sleep(2000);
-	
-}
+	public static void company_profile() throws InterruptedException {
 
+		System.out.println("***************************BL_TC_07_Resident_Admin****************************************");
+		Thread.sleep(5000);
 
+		//click on my company
+		driver.findElement(By.xpath("//a[text()='My Company']")).click();
+
+		Thread.sleep(5000);
+
+		//read only data
+		java.util.List<WebElement> companyprofile1=driver.findElements(By.xpath("//div[@class='status']"));
+		for(WebElement A:companyprofile1) {
+	    System.out.println(A.getText());
+			
+		}
+
+			//read only data
+			java.util.List<WebElement> companyprofile2= driver.findElements(By.xpath("//div[@class='border-secondar text-dark text']"));
+			for(WebElement B:companyprofile2) {
+		    System.out.println(B.getText());
+				
+			}
+	
+			//read only data
+			java.util.List<WebElement> companyprofile3= driver.findElements(By.xpath("//div[@class='col-md-3 col-sm-6 border']"));
+			for(WebElement C:companyprofile3) {
+		    System.out.println(C.getText());
+				
+			}
+		
+	}
 
 }

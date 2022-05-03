@@ -3,25 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="MainClass.SiteRegressionTest">
+      <class name="MainClass.ResidentUserRegressionTest">
         <methods>
-          <include name="beforeTest"/>
-          <include name="VISIT_WEBSITE_Test"/>
-          <include name="filterCompanys"/>
-          <include name="menubaritems_Test"/>
-          <include name="Invoicing_Test"/>
-          <include name="Add_Edit_Delete_Resident_Admin_Test"/>
-          <include name="Configuration_Test"/>
-          <include name="Onboarding_Information_tab_Test"/>
-          <include name="Company_Growth_Test"/>
-          <include name="Profile_Test"/>
-          <include name="validateSiteAdminApplications_Test"/>
-          <include name="Add_edit_Delete_Test"/>
-          <include name="defaultsite_and_selectedsite"/>
           <include name="afterTest"/>
-          <include name="invoicing_Waitlist_Test"/>
+          <include name="beforeTest"/>
+          <include name="companydata_Test"/>
         </methods>
-      </class> <!-- MainClass.SiteRegressionTest -->
+      </class> <!-- MainClass.ResidentUserRegressionTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

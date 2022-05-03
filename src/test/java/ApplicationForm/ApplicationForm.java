@@ -19,23 +19,23 @@ public class ApplicationForm extends Browser{
         	     //click on apply to Biolab
 			     driver.findElement(ApplicationLocatores.Apply_to_BioLabs).click(); 
 			     
-			     driver.manage().timeouts().implicitlyWait(15000,TimeUnit.SECONDS);
+			     driver.manage().timeouts().implicitlyWait(30000,TimeUnit.SECONDS);
 			     Thread.sleep(5000);
 			     //Company Name
 			     driver.findElement(ApplicationLocatores.CompanyName).sendKeys("Biolab");
-			     Thread.sleep(2000);
+			     Thread.sleep(1000);
 			     
 			     //Contact name
 			     driver.findElement(ApplicationLocatores.Contact_name).sendKeys("Salman");
-			     Thread.sleep(2000);
+			     Thread.sleep(1000);
 			     
 			     //contact phone no
 			     driver.findElement(ApplicationLocatores.ContactPhoneNumber).sendKeys("9852451263");
-			     Thread.sleep(2000);
+			     Thread.sleep(1000);
 			     
 			     //Email
-			     driver.findElement(ApplicationLocatores.Email).sendKeys("salmanshaikh9334@gmail.com");
-			     Thread.sleep(2000);
+			     driver.findElement(ApplicationLocatores.Email).sendKeys("salmanshaikh843@gmail.com");
+			     Thread.sleep(1000);
 			     
 			     //Company website
 			     driver.findElement(ApplicationLocatores.CompanyWebsite).sendKeys("www.Biolab.com");
@@ -50,7 +50,7 @@ public class ApplicationForm extends Browser{
 			     act.sendKeys(Keys.ARROW_DOWN).perform();
 			     act.sendKeys(Keys.ARROW_DOWN).perform();
 			     act.sendKeys(Keys.ENTER).perform();
-			     Thread.sleep(2000);
+			     Thread.sleep(1000);
 			     
 			     //Which site apply to
 			     WebElement Which_site_dropdown=driver.findElement(ApplicationLocatores.Which_site);
@@ -59,23 +59,23 @@ public class ApplicationForm extends Browser{
 			     act.sendKeys(Keys.ARROW_DOWN).perform();
 			     act.sendKeys(Keys.ARROW_DOWN).perform();
 			     act.sendKeys(Keys.ENTER).perform();
-			     Thread.sleep(2000);
+			     Thread.sleep(1000);
 			     
 			     //Additional site(s) you are applying to
 			     driver.findElement(ApplicationLocatores.Additional_site).click();
-			     Thread.sleep(2000);
+			     Thread.sleep(1000);
 			     
 			     //select check box
 			     driver.findElement(ApplicationLocatores.Additional_site_checkbox).click();
-			     Thread.sleep(2000);
+			     Thread.sleep(1000);
 			     
 			     //Briefly summarize your technology. What are your differentiators
 			     driver.findElement(ApplicationLocatores.Briefly_summarize).sendKeys("Demo Test");
-			     Thread.sleep(2000);
+			     Thread.sleep(1000);
 			     
 			     //What is your R&D path & commercialization plan
 			     driver.findElement(ApplicationLocatores.commercialization_plan).sendKeys("QA Test");
-			     Thread.sleep(2000);
+			     Thread.sleep(1000);
 			     
 			     //Calender
 			     
@@ -106,7 +106,7 @@ public class ApplicationForm extends Browser{
 			     
 			     //Where was your company founded
 			     driver.findElement(ApplicationLocatores.company_founded).sendKeys("Pune");
-			     Thread.sleep(2000);
+			     Thread.sleep(1000);
 			     
 			     //Company stage of development
 			     WebElement stage_of_development_dropdown=driver.findElement(ApplicationLocatores.stage_of_development);
@@ -115,11 +115,11 @@ public class ApplicationForm extends Browser{
 			     act.sendKeys(Keys.ARROW_DOWN).perform();
 			     act.sendKeys(Keys.ARROW_DOWN).perform();
 			     act.sendKeys(Keys.ENTER).perform();
-			     Thread.sleep(2000);
+			     Thread.sleep(1000);
 			     
 			     //Primary Industry/ Sector*
 			     driver.findElement(ApplicationLocatores.Primary_Industry).click();
-			     Thread.sleep(2000);
+			     Thread.sleep(1000);
 			     
 			     //Additional Industry/ Sectors
 			     
@@ -139,7 +139,7 @@ public class ApplicationForm extends Browser{
 			     
 			     //Funding raised to-date:
 			     driver.findElement(ApplicationLocatores.funding).sendKeys("10000");
-			     Thread.sleep(2000);
+			     Thread.sleep(1000);
 			     
 			     //Funding source
 			     driver.findElement(ApplicationLocatores.Funding_source).click();
@@ -158,7 +158,7 @@ public class ApplicationForm extends Browser{
 			     act.sendKeys(Keys.ARROW_DOWN).perform();
 			     act.sendKeys(Keys.ARROW_DOWN).perform();
 			     act.sendKeys(Keys.ENTER).perform();
-			     Thread.sleep(2000);
+			     Thread.sleep(1000);
 			     
 			     //Are your leadership team, IP, or publications affiliated with an institutional technology transfer office or tech venture office
 			     WebElement leadership_team_dropdown=driver.findElement(ApplicationLocatores.leadership_team);
@@ -166,7 +166,7 @@ public class ApplicationForm extends Browser{
 			     act.click(leadership_team_dropdown).perform();
 			     act.sendKeys(Keys.ARROW_DOWN).perform();
 			     act.sendKeys(Keys.ENTER).perform();
-			     Thread.sleep(2000);
+			     Thread.sleep(1000);
 			     
 			     //Institution(s)*
 			     driver.findElement(ApplicationLocatores.Institution).sendKeys("200");
@@ -178,7 +178,7 @@ public class ApplicationForm extends Browser{
 			     
 			     //How many full-time employees do you expect to have on site in 6-12 months?
 			     driver.findElement(ApplicationLocatores.full_time_employees_12).sendKeys("15");
-			     Thread.sleep(2000);
+			     Thread.sleep(1000);
 			     
 			     //How many of these full-time Residents will utilize our lab facilities to start?*
 			     driver.findElement(ApplicationLocatores.full_time_Residents).sendKeys("18");
@@ -186,7 +186,7 @@ public class ApplicationForm extends Browser{
 			     
 			     //How many lab staff do you intend to have on site in 6-12 months?*
 			     driver.findElement(ApplicationLocatores.lab_staff_12).sendKeys("8");
-			     Thread.sleep(2000);
+			     Thread.sleep(1000);
 			     
 			     //When would you like to join BioLabs
 			     
@@ -200,11 +200,14 @@ public class ApplicationForm extends Browser{
 			     
 			     //What equipment and facilities do you plan to primarily use on site?
 			     driver.findElement(ApplicationLocatores.equipment_and_facilities).sendKeys("Test Demo");
-			     Thread.sleep(2000);
+			     Thread.sleep(1000);
 			     
 			     //I agree to the Terms & Agreement
 			     driver.findElement(ApplicationLocatores.Terms_and_Agreement).click();
 			     
+			     
+			     //Submit button
+			     driver.findElement(By.xpath("//button[@class='btn biolabBtn']")).click();
 			     
 			     
 			     

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Biolab Application Resident Admin Test Suite (0)]" guice-stage="DEVELOPMENT">
+  <listeners>
+    <listener class-name="ExtentReport.ExtentReporterListener"/>
+  </listeners>
+  <test thread-count="5" name="Resident Admin Sanity Test(failed)">
+    <classes>
+      <class name="MainClass.ResidentUserRegressionTest">
+        <methods>
+          <include name="beforeTest"/>
+          <include name="CompanyInformation_Test"/>
+          <include name="Company_Profile_Test"/>
+          <include name="site_members_Test"/>
+          <include name="change_Test"/>
+          <include name="sitecompanies_Test"/>
+          <include name="invoice_Test"/>
+          <include name="profile_Test"/>
+          <include name="afterTest"/>
+          <include name="sitestaff_Test"/>
+          <include name="SponsorProfile_Test"/>
+          <include name="companydata_Test"/>
+          <include name="dashboard_Test"/>
+        </methods>
+      </class> <!-- MainClass.ResidentUserRegressionTest -->
+    </classes>
+  </test> <!-- Resident Admin Sanity Test(failed) -->
+</suite> <!-- Failed suite [Biolab Application Resident Admin Test Suite (0)] -->

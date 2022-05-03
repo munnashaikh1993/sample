@@ -13,11 +13,11 @@ public class BL_TC_02_Site extends Browser
       public static void SortByColumn() throws Exception 
       {
     	  System.out.println("***************************BL_TC_02_Site****************************************");
-    	  driver.manage().timeouts().implicitlyWait(15000, TimeUnit.SECONDS);
-  		Thread.sleep(2000);
-//  		//Companies
-//  		driver.findElement(By.xpath("//a[text()='Companies']")).click();
-//  		Thread.sleep(4000);
+    	  driver.manage().timeouts().implicitlyWait(30000, TimeUnit.SECONDS);
+  		Thread.sleep(8000);
+  		//Companies
+  		driver.findElement(By.xpath("//a[text()='Companies']")).click();
+  		Thread.sleep(4000);
   		
   		
   		
@@ -42,7 +42,7 @@ public class BL_TC_02_Site extends Browser
   		Thread.sleep(1000);
   		
   		driver.navigate().back();
-  		driver.manage().timeouts().implicitlyWait(10000, TimeUnit.SECONDS);
+  		driver.manage().timeouts().implicitlyWait(30000, TimeUnit.SECONDS);
   		Thread.sleep(2000);
   		
   		//click on company status

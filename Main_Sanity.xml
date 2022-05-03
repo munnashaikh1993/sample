@@ -5,12 +5,11 @@
 		<listener class-name="ExtentReport.ExtentReporterListener" />
 	</listeners>
 	<suite-files>
-	<suite-file path="./Sponsor_Sanity_Suite.xml"></suite-file>
-	<suite-file path="./Sponsor_Sanity_Suite1.xml"></suite-file>
+	
+	<suite-file path="./ResidentUser_Sanity_Suite.xml"></suite-file>
+	<suite-file path="./ResidentAdmin_Sanity_Suite.xml"></suite-file>
 	<suite-file path="./Site_Sanity_Suite.xml"></suite-file>
-	<suite-file path="./Resident_Sanity_Suite.xml"></suite-file>
-	<suite-file path="./Sponsor_Sanity_Suite2.xml"></suite-file>
-	<suite-file path="./Sponsor_Sanity_Suite3.xml"></suite-file>
+	<suite-file path="./Sponsor_Sanity_Suite.xml"></suite-file>
 	
 	
 	</suite-files>

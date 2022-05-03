@@ -9,10 +9,14 @@ import Browsers.Browser;
 public class BL_TC_01_Site extends Browser{
 	public static void validateSiteAdminApplications() throws Exception {
 		System.out.println("***************************BL_TC_01_Site****************************************");
-		driver.manage().timeouts().implicitlyWait(20000, TimeUnit.SECONDS); 
-		Thread.sleep(2000);
+		driver.manage().timeouts().implicitlyWait(30000, TimeUnit.SECONDS); 
+		Thread.sleep(5000);
 		//Companies
 		WebElement Companies_Header=driver.findElement(ApplicationLocatores.Companies);
+		
+		Companies_Header.click();
+		driver.manage().timeouts().implicitlyWait(30000, TimeUnit.SECONDS);
+		Thread.sleep(1000);
 		if (Companies_Header.isEnabled()) {
 			System.out.println("Companies text visible in header");
 		}

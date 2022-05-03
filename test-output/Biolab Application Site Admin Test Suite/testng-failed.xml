@@ -9,20 +9,40 @@
       <class name="MainClass.SiteRegressionTest">
         <methods>
           <include name="beforeTest"/>
-          <include name="VISIT_WEBSITE_Test"/>
-          <include name="filterCompanys"/>
+          <include name="Resident_Table_View_onboarding_offboarding_Test"/>
           <include name="menubaritems_Test"/>
           <include name="Invoicing_Test"/>
-          <include name="Add_Edit_Delete_Resident_Admin_Test"/>
-          <include name="Configuration_Test"/>
+          <include name="Events_and_Training_Test"/>
+          <include name="name_Test"/>
           <include name="Onboarding_Information_tab_Test"/>
+          <include name="Waitlist_Test"/>
+          <include name="SortByColumn_Test"/>
           <include name="Company_Growth_Test"/>
           <include name="Profile_Test"/>
-          <include name="validateSiteAdminApplications_Test"/>
+          <include name="Site_Configuration_Test"/>
+          <include name="Forword_Application_Test"/>
           <include name="Add_edit_Delete_Test"/>
-          <include name="defaultsite_and_selectedsite"/>
+          <include name="Site_accesible_Test"/>
           <include name="afterTest"/>
+          <include name="Retainer_Paid_Date_Test"/>
+          <include name="defaultsite_and_selectedsite_Test"/>
           <include name="invoicing_Waitlist_Test"/>
+          <include name="ReadWriteaccess_Test"/>
+          <include name="Add_Edit_Delete_Resident_User_Test"/>
+          <include name="VISIT_WEBSITE_Test"/>
+          <include name="Partners_and_Sponsors_Test"/>
+          <include name="Sort_By_Column_Test"/>
+          <include name="Add_Edit_Delete_Resident_Admin_Test"/>
+          <include name="Configuration_Test"/>
+          <include name="Update_all_status_Test"/>
+          <include name="Change_Request_Test"/>
+          <include name="Offboarding_Test"/>
+          <include name="filterCompanys_Test"/>
+          <include name="validateSiteAdminApplications_Test"/>
+          <include name="Onbording_Test"/>
+          <include name="Onboarding"/>
+          <include name="Tile_View_Test"/>
+          <include name="Cpompany_table_view_Test"/>
         </methods>
       </class> <!-- MainClass.SiteRegressionTest -->
     </classes>
